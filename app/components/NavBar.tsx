@@ -9,7 +9,7 @@ export function NavBar() {
                 <Link href={"/"}>AnnaZ.</Link>
             </div>
             
-            <div className="flex gap-[35px] font-normal text-lg">
+            <div className="flex gap-[35px] font-normal text-lg text-gray-800">
                 <Link href={"/"}>Portfolio</Link>
                 <Link href={"/about"}>About</Link>
                 <Link href={"/contact"}>Contact</Link>
