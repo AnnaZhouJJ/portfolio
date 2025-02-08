@@ -15,8 +15,10 @@ const ProjectCover = ({
 }: ProjectCoverProps) => {
     return(
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
-            {/* Left: Custom cover section */}
+            {/* Left: Custom cover section*/}
+            <div className="w-full flex items-center">
                 {children}
+            </div>
 
             {/* Right: Content */}
             <div className="flex flex-col justify-center">
