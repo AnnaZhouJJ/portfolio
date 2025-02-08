@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ProjectsSection from "./components/ProjectsSection";
+import OtherWorks from "./components/OtherWorks";
 
 export default function Home() {
   return (
@@ -28,10 +29,14 @@ export default function Home() {
             Focused on crafting user experiences and user interface for software, mobile and web products.
           </p>
         </div>
+
+        {/* Projects Section */}
         <ProjectsSection />
+
+        {/* Other Works Section */}
+        <OtherWorks />
       </div>
 
-      {/* Projects Section */}
       
 
     </div>

@@ -80,6 +80,7 @@ const ProjectsSection = () => {
         />
       </ProjectCover>
 
+
       {/* adding more projects here */}
     </div>
   );
