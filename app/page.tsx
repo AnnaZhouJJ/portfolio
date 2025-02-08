@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ProjectCover from "./components/ProjectCover";
 import ProjectsSection from "./components/ProjectsSection";
 
 export default function Home() {
