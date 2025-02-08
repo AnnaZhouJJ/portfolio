@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ProjectCover from "./components/ProjectCover";
+import ProjectsSection from "./components/ProjectsSection";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       {/* Content */}
       <div className="max-w-5xl ml-8 sm:ml-20 lg:ml-80">
         <h1 className="text-5xl text-gray-800 sm:text-7xl font-bold mb-4 md:mb-8 lg:mb-12 mt-24 leading-relaxed">
-          Hi, I'm Anna Zhou 👋
+          {"Hi, I'm Anna Zhou 👋"}
         </h1>
         <h2 className="text-3xl sm:text-5xl font-medium text-gray-800 mb-4 md:mb-8 lg:mb-12">
           UI/UX Designer
@@ -28,32 +29,9 @@ export default function Home() {
         </p>
       </div>
 
-      {/* Freature Projects Title*/}
-      <div className="max-w-6xl ml-8 sm:ml-20 lg:ml-80 mt-52">
-        <div className="flex items-center gap-4 mb-16">
-          <div className="w-12 h-[1px] bg-gray-600"></div>
-          <h3 className="text-xl font-medium text-gray-600 ">FEATURE PROJECTS</h3>
-        </div>
+      {/* Projects Section */}
+      <ProjectsSection />
 
-        {/* Add ProjectCover components here */}
-        {/* Custom Frontcover cover design */}
-        <ProjectCover 
-        title="Frontcover"
-        description="A digital platform for growing vibrant communities."
-        dateRange="November 2024 - December 2024"
-        tags={["UI Design", "Website", "Components"]}
-        >
-        <Image 
-          src="/projects/frontcover/Frontcover cover.png"
-          alt="Frontcover logo"
-          width={545}
-          height={327}
-          className="w-full rounded-xl shadow-xl hover:opacity-90 transition-all duration-300 hover:brightness-90"
-        />
-        </ProjectCover>
-
-
-      </div>
     </div>
 
   );
