@@ -3,8 +3,7 @@ import ProjectCover from "./ProjectCover";
 
 const ProjectsSection = () => {
   return (
-    <div className="max-w-[1440px] mx-auto px-12 mt-48 ">
-      {/* max-w-6xl ml-8 sm:ml-20 lg:ml-80 mt-52 */}
+    <div className="max-w-[1440px] mx-12 px-12 mt-48 ">
       {/* Feature Projects Title */}
       
       <div className="flex items-center gap-4 mb-16">
