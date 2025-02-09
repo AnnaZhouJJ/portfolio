@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ProjectsSection from "./components/ProjectsSection";
 import OtherWorks from "./components/OtherWorks";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -37,7 +38,7 @@ export default function Home() {
         <OtherWorks />
       </div>
 
-      
+      <Footer />
 
     </div>
 
