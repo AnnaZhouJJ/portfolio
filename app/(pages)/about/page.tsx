@@ -36,7 +36,7 @@ export default function About() {
             <p>
               As an empathetic INFJ, I aim for a purposeful life. Guided by deep 
               understanding and creativity, I design meaningful digital experiences 
-              to solve human/user problems. Let's connect and create innovative 
+              to solve human/user problems. {"Let's connect and create innovative "} 
               technologies that can make a positive impact on the world!
             </p>
           </div>
