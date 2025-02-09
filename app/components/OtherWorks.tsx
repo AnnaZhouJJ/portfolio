@@ -18,7 +18,7 @@ const WorkCard = ({ title, imageSrc, imageAlt }: WorkCardProps) => {
             className="w-full"
           />
         </div>
-        <h3 className="text-xl font-semibold text-gray-700 mt-6">{title}</h3>
+        <h3 className="text-xl font-semibold text-gray-700 mt-8">{title}</h3>
       </div>
     );
 };
@@ -45,6 +45,26 @@ const OtherWorks = () => {
         imageSrc: "/projects/other/spotify-AR-UI.png",
         imageAlt: "Spotify AR UI design",
       },
+      {
+        title: "tEMR System | Healthcare App",
+        imageSrc: "/projects/other/tEMR-system.png",
+        imageAlt: "tEMR system design",
+      },
+      {
+        title: "Interactive 3D Keyboard | Spline",
+        imageSrc: "/projects/other/3D-keyboard.png",
+        imageAlt: "Interactive 3D keyboard design",
+      },
+      {
+        title: "COVIDENT | Mobile Healthcare APP",
+        imageSrc: "/projects/other/covident.png",
+        imageAlt: "COVIDENT mobile app design",
+      },
+      {
+        title: "MealTime | Social APP",
+        imageSrc: "/projects/other/MealTime.png",
+        imageAlt: "MealTime social app design",
+      },
       // Add more works here
     ];
 
@@ -52,15 +72,15 @@ const OtherWorks = () => {
     return (
         <div className="max-w-[1440px] mx-12 px-12 mt-2">
           {/* Section Title */}
-          <div className="flex items-center gap-4 mb-10">
+          <div className="flex items-center gap-4 mb-8">
             <div className="w-12 h-[1px] bg-gray-600"></div>
             <h3 className="text-xl font-medium text-gray-600">OTHER WORKS</h3>
           </div>
     
           {/* Two-column grid with bigger images */}
-          <div className="grid grid-cols-1 md:grid-cols-2 sm-grid-cols-1 gap-x-16 gap-y-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 sm-grid-cols-1 gap-x-20 gap-y-0">
             {works.map((work, index) => (
-              <div key={index} className={index % 2 === 1 ? "md:mt-16" : ""}>
+              <div key={index} className={index % 2 === 1 ? "md:mt-14" : ""}>
                 <WorkCard
                   title={work.title}
                   imageSrc={work.imageSrc}
