@@ -3,8 +3,9 @@ import ProjectCover from "./ProjectCover";
 
 const ProjectsSection = () => {
   return (
-    <div className="max-w-6xl ml-8 sm:ml-20 lg:ml-80 mt-52">
+    <div className="max-w-[1440px] mx-12 px-12 mt-48 ">
       {/* Feature Projects Title */}
+      
       <div className="flex items-center gap-4 mb-16">
         <div className="w-12 h-[1px] bg-gray-600"></div>
         <h3 className="text-xl font-medium text-gray-600">FEATURE PROJECTS</h3>
@@ -23,7 +24,7 @@ const ProjectsSection = () => {
           alt="Frontcover logo"
           width={545}
           height={327}
-          className="w-full rounded-xl shadow-xl hover:brightness-90 transition-all duration-300"
+          className="w-full rounded-xl shadow-lg hover:brightness-90 transition-all duration-300"
         />
       </ProjectCover>
 
@@ -37,10 +38,10 @@ const ProjectsSection = () => {
       >
         <Image 
           src="/projects/lexill/lexill-cover.png"
-          alt="Lexill app screens"
+          alt="Lexill app mockup"
           width={545}
           height={327}
-          className="w-full rounded-xl shadow-xl hover:brightness-90 transition-all duration-300"
+          className="w-full rounded-xl shadow-lg hover:brightness-90 transition-all duration-300"
         />
       </ProjectCover>
 
@@ -54,12 +55,32 @@ const ProjectsSection = () => {
       >
         <Image 
           src="/projects/happycap/happycap-cover.png"
-          alt="Happy Cap Studio interface"
+          alt="Happy Cap Studio logo"
           width={545}
           height={327}
-          className="w-full rounded-xl shadow-xl hover:brightness-90 transition-all duration-300"
+          className="w-full rounded-xl shadow-lg hover:brightness-90 transition-all duration-300"
         />
       </ProjectCover>
+
+      {/* BakeMaster Project */}
+      <ProjectCover 
+        title="BakeMaster"
+        description="A digital twin for bakery shops to address their current challenges and optimize their operation and efficiency."
+        dateRange="March 2023 - July 2023"
+        tags={["UI/UX Design", "End-to-end", "Tablet"]}
+        imageOnRight={true}
+      >
+        <Image 
+          src="/projects/bakemaster/bakemaster-cover.png"
+          alt="BakeMaster mockup"
+          width={545}
+          height={327}
+          className="w-full rounded-xl shadow-lg hover:brightness-90 transition-all duration-300"
+        />
+      </ProjectCover>
+
+
+      {/* adding more projects here */}
     </div>
   );
 };

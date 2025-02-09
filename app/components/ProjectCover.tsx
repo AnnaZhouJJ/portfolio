@@ -16,7 +16,7 @@ const ProjectCover = ({
     imageOnRight = false,
 }: ProjectCoverProps) => {
     return(
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-32 max-w-6xl">
             {/* Conditionally render based on imageOnRight prop */}
             {!imageOnRight ? (
                 <>
