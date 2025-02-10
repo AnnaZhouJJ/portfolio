@@ -1,12 +1,14 @@
 import Image from 'next/image';
+import Skills from '@/app/components/Skills';
+import Footer from '@/app/components/Footer';
 
 export default function About() {
 
   return (
-    <div className="max-w-[1440px] mx-auto px-12 py-24">
+    <div className="max-w-[1440px] mx-auto px-12 pt-24">
       {/* Description of about me */}
       <div className="flex flex-col lg:flex-row items-center justify-center gap-16">
-        <div className="lg:w-[400px]">
+        <div className="lg:w-[400px] transition-all duration-300 hover:scale-105 hover:rotate-2 hover:shadow-2xl">
           <Image
             src="/projects/other/Profile-photo.jpg"
             alt="Anna Zhou - Profile Photo"
@@ -29,8 +31,7 @@ export default function About() {
 
             <p>
               I am passionate about human-centred design in various digital products 
-              and I believe by reducing the bridge gaps between people and technologies 
-              can better improve user experience.
+              and I believe that bridging the gap between people and technology is key to creating seamless and impactful user experiences.
             </p>
 
             <p>
@@ -44,13 +45,35 @@ export default function About() {
       </div>
 
       {/* Education */}
-      <div className='flex flex-col my-20'>
-        <h1 className='text-gray-800 font-semibold text-4xl'>
-          Education
-        </h1>
+      <div className='flex flex-col justify-center my-32 mx-28'>
+        <h1 className='text-gray-800 font-semibold text-4xl mb-8'>Education</h1>
+        
+        <div className="space-y-12">
+          <div>
+            <h3 className="text-2xl text-gray-700 mb-4">University of Melbourne</h3>
+            <div className="flex items-center gap-2">
+              <span className='text-xl text-gray-600'>Master of IT, Specializing Human-Computer Interaction</span>
+              <span className="text-gray-600">•</span>
+              <span className='text-gray-600'>2022 - 2023</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-2xl text-gray-700 mb-4">University of Melbourne</h3>
+            <div className="flex items-center gap-2">
+              <span className='text-xl text-gray-600'>Bachelor of Design, Major in Digital Technologies</span>
+              <span className="text-gray-600">•</span>
+              <span className='text-gray-600'>2019 - 2021</span>
+            </div>
+          </div>
+        </div>
       </div>
 
+      {/* Skills */}
+      <Skills />
 
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
