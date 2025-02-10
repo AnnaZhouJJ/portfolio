@@ -8,7 +8,7 @@ export default function About() {
     <div className="max-w-[1440px] mx-auto px-12 pt-24">
       {/* Description of about me */}
       <div className="flex flex-col lg:flex-row items-center justify-center gap-16">
-        <div className="lg:w-[400px] transition-all duration-300 hover:scale-105 hover:rotate-2 hover:shadow-2xl">
+        <div className="lg:w-[400px] rounded-3xl transition-all duration-300 hover:scale-105 hover:rotate-2 hover:shadow-2xl">
           <Image
             src="/projects/other/Profile-photo.jpg"
             alt="Anna Zhou - Profile Photo"
