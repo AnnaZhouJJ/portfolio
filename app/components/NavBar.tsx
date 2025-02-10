@@ -2,12 +2,36 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export function NavBar() {
     const pathname = usePathname();
+    const [visible, setVisible] = useState(true);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+    // Nav bar animation
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.scrollY;
+            
+            // Make navbar visible when scrolling up or at the top
+            setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+            
+            setPrevScrollPos(currentScrollPos);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [prevScrollPos]);
+
+    // Nav bar with hover and focus state
     return (
-        <div className="h-[80px] w-screen sticky bg-white shadow-[0_4px_40px_0_rgba(212,212,212,0.25)] px-12
-                        flex items-center justify-between">
+        <div className={`h-[80px] w-screen fixed bg-white/50 backdrop-blur-sm shadow-[0_4px_40px_0_rgba(212,212,212,0.25)] px-12
+                        flex items-center justify-between transition-transform duration-300 z-50
+                        ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
             
             <div className="font-bold text-lg">
                 <Link href={"/"}>AnnaZ.</Link>

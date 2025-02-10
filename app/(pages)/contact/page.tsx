@@ -20,7 +20,7 @@ export default function Contact() {
 
   return (
     <div className="max-w-[1440px] mx-auto px-12 pt-24">
-      <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl p-12">
+      <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl p-12 mt-16">
         <h1 className="text-4xl font-bold text-gray-800 mb-12 text-center">
           {"Let's get in touch!"}
         </h1>
