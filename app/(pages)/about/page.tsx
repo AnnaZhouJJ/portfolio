@@ -45,28 +45,62 @@ export default function About() {
       </div>
 
       {/* Education */}
-      <div className='flex flex-col justify-center my-32 mx-28'>
+      <div className='flex flex-col justify-center my-32 mx-28 px-8 md:px-16'>
         <h1 className='text-gray-800 font-semibold text-4xl mb-8'>Education</h1>
         
-        <div className="space-y-12">
-          <div>
-            <h3 className="text-2xl text-gray-700 mb-4">University of Melbourne</h3>
-            <div className="flex items-center gap-2">
-              <span className='text-xl text-gray-600'>Master of IT, Specializing Human-Computer Interaction</span>
-              <span className="text-gray-600">•</span>
-              <span className='text-gray-600'>2022 - 2023</span>
+        <div className="space-y-20">
+          <div className='flex flex-col lg:flex-row gap-x-8'>
+            <div className="flex-shrink-0 pt-1">
+              <Image 
+                src="/icons/unimelb-logo.svg"
+                alt="University of Melbourne Logo"
+                width={150}
+                height={150}
+                className="rounded-xl"
+                // priority
+                quality={100}
+              />
+            </div>
+            
+            <div className='flex flex-col gap-y-4'>
+              <h3 className="text-2xl text-gray-700 "><b>Human-Computer Interaction</b>, Master of IT</h3>
+              <div className="flex items-center gap-2 text-xl">
+                <span className="text-gray-600">University of Melbourne</span>
+                <span className="text-gray-600">•</span>
+                <span className='text-gray-600'>2022 - 2023</span>
+              </div>
+              <p className='text-gray-500 text-lg'>Specialized in designing and developing user-centered digital systems, with a focus on <b>usability evaluation, interaction design, and prototyping. </b> 
+                Gained hands-on experience in mobile app development, wearables, and software development processes, preparing me to create innovative solutions that bridge human needs and technology.</p>
             </div>
           </div>
 
-          <div>
-            <h3 className="text-2xl text-gray-700 mb-4">University of Melbourne</h3>
-            <div className="flex items-center gap-2">
-              <span className='text-xl text-gray-600'>Bachelor of Design, Major in Digital Technologies</span>
-              <span className="text-gray-600">•</span>
-              <span className='text-gray-600'>2019 - 2021</span>
+          <div className='flex flex-col lg:flex-row gap-x-8'>
+            <div className="flex-shrink-0 pt-1">
+              <Image 
+                src="/icons/unimelb-logo.svg"
+                alt="University of Melbourne Logo"
+                width={150}
+                height={150}
+                className="rounded-md"
+                // priority
+                quality={100}
+              />
+            </div>
+            <div className='flex flex-col gap-y-4'>
+              <h3 className="text-2xl text-gray-700 "><b>Digital Technologies</b>, Bachelor of Design</h3>
+              <div className="flex items-center gap-2 text-xl">
+                <span className="text-gray-600">University of Melbourne</span>
+                <span className="text-gray-600">•</span>
+                <span className='text-gray-600'>2019 - 2021</span>
+              </div>
+              <p className='text-gray-500 text-lg'>Focused on designing and developing digital solutions, including <b>UI/UX design, web development and user experience. </b>
+                Built a strong foundation in programming (HTML, CSS, JavaScript, Python) and UI/UX tools, blending technical skills with creative problem-solving.</p>
             </div>
           </div>
+
+
         </div>
+
       </div>
 
       {/* Skills */}
