@@ -18,6 +18,7 @@ const ProjectsSection = () => {
         dateRange="November 2024 - December 2024"
         tags={["UI Design", "Website", "Components"]}
         imageOnRight={false}
+        link="/projects/frontcover"
       >
         <Image 
           src="/projects/frontcover/Frontcover cover.png"
@@ -35,6 +36,7 @@ const ProjectsSection = () => {
         dateRange="September 2024 - October 2024"
         tags={["UI/UX Design", "Mobile", "Website"]}
         imageOnRight={true}
+        link="/projects/lexill"
       >
         <Image 
           src="/projects/lexill/lexill-cover.png"
@@ -52,6 +54,7 @@ const ProjectsSection = () => {
         dateRange="September 2023 - December 2023"
         tags={["UI/UX Design", "Kiosk Interface"]}
         imageOnRight={false}
+        link="/projects/happyCapStudio"
       >
         <Image 
           src="/projects/happycap/happycap-cover.png"
@@ -69,6 +72,7 @@ const ProjectsSection = () => {
         dateRange="March 2023 - July 2023"
         tags={["UI/UX Design", "End-to-end", "Tablet"]}
         imageOnRight={true}
+        link= "https://www.behance.net/gallery/179057041/Digital-Twins-UIUX-Design"
       >
         <Image 
           src="/projects/bakemaster/bakemaster-cover.png"

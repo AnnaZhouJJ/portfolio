@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 interface ProjectCoverProps {
     title: string;
     description: string;
@@ -5,6 +7,7 @@ interface ProjectCoverProps {
     tags: string[];
     children: React.ReactNode;
     imageOnRight?: boolean;
+    link?: string; 
 }
 
 const ProjectCover = ({
@@ -14,8 +17,9 @@ const ProjectCover = ({
     tags,
     children,
     imageOnRight = false,
+    link
 }: ProjectCoverProps) => {
-    return(
+    const content = (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-32 max-w-6xl">
             {/* Conditionally render based on imageOnRight prop */}
             {!imageOnRight ? (
@@ -40,7 +44,7 @@ const ProjectCover = ({
                         </div>
                         <button className="font-medium mt-8 w-40 text-center text-lg
                             text-gray-800 hover:bg-gray-800 hover:text-white py-2 rounded-lg transition-all duration-200 hover:scale-100">
-                            View Case Study
+                            {link?.startsWith('http') ? 'View on Behance' : 'View Case Study'}
                         </button>
                     </div>
                 </>
@@ -63,7 +67,7 @@ const ProjectCover = ({
                         </div>
                         <button className="font-medium mt-8 w-40 text-center text-lg
                             text-gray-800 hover:bg-gray-800 hover:text-white py-2 rounded-lg transition-all duration-200 hover:scale-100">
-                            View Case Study
+                            {link?.startsWith('http') ? 'View on Behance' : 'View Case Study'}
                         </button>
                     </div>
                     <div className="w-full flex items-center">
@@ -73,5 +77,23 @@ const ProjectCover = ({
             )}
         </div>
     );
+
+    if (link) {
+        const isExternal = link.startsWith('http');
+        return (
+            <Link 
+                href={link}
+                {...(isExternal ? {
+                    target: "_blank",
+                    rel: "noopener noreferrer"
+                } : {})}
+                className="block hover:opacity-95 transition-opacity duration-200"
+            >
+                {content}
+            </Link>
+        );
+    }
+
+    return content;
 };
 export default ProjectCover;
