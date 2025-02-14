@@ -41,12 +41,12 @@ const Skills = () => {
     ];
 
     return (
-        <div className='flex flex-col justify-center my-32 mx-28'>
+        <div className='flex flex-col justify-center my-32 mx-28 px-8 md:px-16'>
             <h1 className='text-gray-800 font-semibold text-4xl mb-12'>Skills</h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-28">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20">
                 {skills.map((skill, index) => (
-                    <div key={index} className="flex flex-col max-w-[460px]">
+                    <div key={index} className="flex flex-col max-w-xl">
                         <div className="mb-6">
                         <Image
                             src={skill.iconSrc}
@@ -57,7 +57,7 @@ const Skills = () => {
                         />
                         </div>
                         <h3 className="text-2xl font-semibold text-gray-600 mb-4">{skill.title}</h3>
-                        <p className="text-lg text-gray-500 leading-relaxed">{skill.description}</p>
+                        <p className="text-lg text-gray-500 leading-relaxed max-w-lg">{skill.description}</p>
                     </div>
                 ))}
             </div>
