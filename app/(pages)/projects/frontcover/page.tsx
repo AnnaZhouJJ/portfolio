@@ -59,7 +59,7 @@ export default function Frontcover () {
                     {/* Testimonial Section */}
                     <div className="pb-20 flex justify-center">
                         <div className="max-w-[1000px] w-full bg-gray-100 rounded-xl p-12 flex flex-col items-center text-center">
-                            <p className="text-xl font-medium text-gray-800 mb-8">"Anna did great work and was great to work with. She is very responsive."</p>
+                            <p className="text-xl font-medium text-gray-800 mb-8">&quot;Anna did great work and was great to work with. She is very responsive.&quot;</p>
                             <div className="flex items-center gap-4">
                                 <Image 
                                     src="/projects/frontcover/alan-crabbe.jpg"
