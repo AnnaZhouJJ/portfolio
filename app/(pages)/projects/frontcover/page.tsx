@@ -1,8 +1,15 @@
+'use client'
+
+import { useState } from 'react'
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
+import ImageModal from '@/app/components/ImageModal'
 import Footer from '@/app/components/Footer';
 import ProjectHeader from '@/app/components/ProjectHeaderProps';
 import Image from "next/image";
 
 export default function Frontcover () {
+    const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string; caption?: string } | null>(null);
+
     return (
         <main>
             <ProjectHeader 
@@ -13,7 +20,7 @@ export default function Frontcover () {
                 description="Frontcover is a digital platform for growing vibrant communities. Through visual updates, curated content, and exclusive benefits, the platform creates a centralized hub that keeps communities connected and engaged."
                 websiteLink="https://frontcover.com"
             />
-            {/* Rest of your case study content */}
+            {/* Rest of the case study content */}
             <div className="max-w-[1440px] mx-auto px-12 pt-20 flex flex-col items-center">
                 <div className="flex flex-col justify-center">
                     <Image 
@@ -72,29 +79,55 @@ export default function Frontcover () {
                     {/* Design Showcase Section */}
                     <div className="pb-10 flex justify-center">
                         <div className="max-w-[1000px] w-full">
-                            <h2 className="text-2xl font-semibold text-gray-800 mb-10">Design Showcase</h2>
-                            <div className="flex flex-col gap-6 items-center">
-                                <Image 
-                                    src="/projects/frontcover/frontcover - before.png"
-                                    alt="Frontcover design - before changes"
-                                    width={1000}
-                                    height={700}
-                                    className="rounded-2xl"
-                                />
-                                <p className="text-gray-800 text-md font-medium mb-12">Before changes (Frontcover Community Page)</p>
-                            </div>
-                            <div className="flex flex-col gap-6 items-center">
-                                <Image 
-                                    src="/projects/frontcover/frontcover - after2.png"
-                                    alt="Frontcover design - after chagnes"
-                                    width={1000}
-                                    height={700}
-                                    className="rounded-2xl"
-                                />
-                                <p className="text-gray-800 text-md font-medium mb-10">After changes example (Frontcover Community Page)</p>
+                            <h2 className="text-2xl font-medium text-gray-800 mb-10">Design Showcase</h2>
+                            <div className="flex flex-col gap-12">
+                                {[
+                                    {
+                                        src: '/projects/frontcover/frontcover - before.png',
+                                        alt: 'Frontcover design - before changes',
+                                        caption: 'Before changes (Frontcover Community Page)'
+                                    },
+                                    {
+                                        src: '/projects/frontcover/frontcover - after2.png',
+                                        alt: 'Frontcover design - after changes',
+                                        caption: 'After changes example (Frontcover Community Page)'
+                                    }
+                                ].map((image, index) => (
+                                    <div key={index} className="flex flex-col gap-4">
+                                        <div className="relative group cursor-pointer">
+                                            <Image 
+                                                src={image.src}
+                                                alt={image.alt}
+                                                width={1000}
+                                                height={700}
+                                                className="rounded-2xl"
+                                                onClick={() => setSelectedImage(image)}
+                                            />
+                                            <div 
+                                                className="absolute bottom-4 right-4 bg-white hover:bg-gray-100 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-all shadow-lg cursor-pointer"
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    setSelectedImage(image);
+                                                }}
+                                            >
+                                                <MagnifyingGlassIcon className="w-6 h-6 text-gray-600 hover:text-gray-900" />
+                                            </div>
+                                        </div>
+                                        <div className='flex flex-col items-center'>
+                                            <p className="text-gray-800 font-semibold text-base">{image.caption}</p>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
+
+                    <ImageModal 
+                        isOpen={!!selectedImage}
+                        onClose={() => setSelectedImage(null)}
+                        imageSrc={selectedImage?.src ?? ''}
+                        imageAlt={selectedImage?.alt ?? ''}
+                    />
 
                     {/* Design Process Section */}
                     <div className="flex flex-col items-center justify-center">
@@ -107,21 +140,56 @@ export default function Frontcover () {
                             <p className='text-gray-800 text-3xl font-semibold mb-4'>Research and analyze technical constraints</p>
                             <p className='text-gray-700 text-xl leading-relaxed mb-6'>Explored contemporary bento-style layouts and analyzed system requirements to establish design parameters for the widget system.</p>
                             <div className="flex flex-col gap-6">
-                                <Image 
-                                    src="/projects/frontcover/1.2 Card configuration.png"
-                                    alt="Card configuration"
-                                    width={1000}
-                                    height={700}
-                                    className="rounded-2xl"
-                                />
+                                <div className="relative group cursor-pointer">
+                                    <Image 
+                                        src="/projects/frontcover/1.2 Card configuration.png"
+                                        alt="Card configuration"
+                                        width={1000}
+                                        height={700}
+                                        className="rounded-2xl"
+                                        onClick={() => setSelectedImage({
+                                            src: "/projects/frontcover/1.2 Card configuration.png",
+                                            alt: "Card configuration"
+                                        })}
+                                    />
+                                    <div className="absolute bottom-4 right-4 bg-white hover:bg-gray-100 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-all shadow-lg"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedImage({
+                                                src: "/projects/frontcover/1.2 Card configuration.png",
+                                                alt: "Card configuration"
+                                            });
+                                        }}
+                                    >
+                                        <MagnifyingGlassIcon className="w-6 h-6 text-gray-600 hover:text-gray-900" />
+                                    </div>
+                                </div>
                                 <p className="text-gray-700 font-sm mb-8 px-4">Defined core card elements: configuration options, labels, and interaction states.</p>
-                                <Image 
-                                    src="/projects/frontcover/1.3 Card size.png"
-                                    alt="Card size"
-                                    width={1000}
-                                    height={700}
-                                    className="rounded-2xl"
-                                />
+                                
+                                <div className="relative group cursor-pointer">
+                                    <Image 
+                                        src="/projects/frontcover/1.3 Card size.png"
+                                        alt="Card size"
+                                        width={1000}
+                                        height={700}
+                                        className="rounded-2xl"
+                                        onClick={() => setSelectedImage({
+                                            src: "/projects/frontcover/1.3 Card size.png",
+                                            alt: "Card size"
+                                        })}
+                                    />
+                                    <div className="absolute bottom-4 right-4 bg-white hover:bg-gray-100 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-all shadow-lg"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedImage({
+                                                src: "/projects/frontcover/1.3 Card size.png",
+                                                alt: "Card size"
+                                            });
+                                        }}
+                                    >
+                                        <MagnifyingGlassIcon className="w-6 h-6 text-gray-600 hover:text-gray-900" />
+                                    </div>
+                                </div>
                                 <p className="text-gray-700 font-sm mb-8 px-4">Define fixed widget sizes based on technical constraints on the web to maintain consistency across different cards.</p>
                             </div>
                         </div>
@@ -132,13 +200,30 @@ export default function Frontcover () {
                             <p className='text-gray-800 text-3xl font-semibold mb-4'>Created a design system</p>
                             <p className='text-gray-700 text-xl leading-relaxed mb-6'>Created a comprehensive design system with color palette, typography, and spacing guidelines to ensure brand cohesion.</p>
                             <div className="flex flex-col gap-6">
-                                <Image 
-                                    src="/projects/frontcover/2.1 Brand Guideline.png"
-                                    alt="Brand Guideline"
-                                    width={1000}
-                                    height={700}
-                                    className="rounded-2xl"
-                                />
+                                <div className="relative group cursor-pointer">
+                                    <Image 
+                                        src="/projects/frontcover/2.1 Brand Guideline.png"
+                                        alt="Brand Guideline"
+                                        width={1000}
+                                        height={700}
+                                        className="rounded-2xl"
+                                        onClick={() => setSelectedImage({
+                                            src: "/projects/frontcover/2.1 Brand Guideline.png",
+                                            alt: "Brand Guideline"
+                                        })}
+                                    />
+                                    <div className="absolute bottom-4 right-4 bg-white hover:bg-gray-100 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-all shadow-lg"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedImage({
+                                                src: "/projects/frontcover/2.1 Brand Guideline.png",
+                                                alt: "Brand Guideline"
+                                            });
+                                        }}
+                                    >
+                                        <MagnifyingGlassIcon className="w-6 h-6 text-gray-600 hover:text-gray-900" />
+                                    </div>
+                                </div>
                                 <p className="text-gray-700 font-sm mb-8 px-4">Established color palette and typography hierarchy for consistent visual language.</p>
                             </div>
                         </div>
@@ -149,21 +234,56 @@ export default function Frontcover () {
                             <p className='text-gray-800 text-3xl font-semibold mb-4'>Widget design and layout</p>
                             <p className='text-gray-700 text-xl leading-relaxed mb-6'>Explored bento-style arrangements to create engaging community content displays and designed widgets with a fixed size.</p>
                             <div className="flex flex-col gap-6">
-                                <Image 
-                                    src="/projects/frontcover/3.1  Component size.png"
-                                    alt="Component size"
-                                    width={1000}
-                                    height={700}
-                                    className="rounded-2xl"
-                                />
+                                <div className="relative group cursor-pointer">
+                                    <Image 
+                                        src="/projects/frontcover/3.1  Component size.png"
+                                        alt="Component size"
+                                        width={1000}
+                                        height={700}
+                                        className="rounded-2xl"
+                                        onClick={() => setSelectedImage({
+                                            src: "/projects/frontcover/3.1  Component size.png",
+                                            alt: "Component size"
+                                        })}
+                                    />
+                                    <div className="absolute bottom-4 right-4 bg-white hover:bg-gray-100 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-all shadow-lg"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedImage({
+                                                src: "/projects/frontcover/3.1  Component size.png",
+                                                alt: "Component size"
+                                            });
+                                        }}
+                                    >
+                                        <MagnifyingGlassIcon className="w-6 h-6 text-gray-600 hover:text-gray-900" />
+                                    </div>
+                                </div>
                                 <p className="text-gray-700 font-sm mb-8 px-4">Explored various bento-style arrangements to showcase different content types effectively.</p>
-                                <Image 
-                                    src="/projects/frontcover/3.2  Component example.png"
-                                    alt="Component UI example"
-                                    width={1000}
-                                    height={700}
-                                    className="rounded-2xl"
-                                />
+                                
+                                <div className="relative group cursor-pointer">
+                                    <Image 
+                                        src="/projects/frontcover/3.2  Component example.png"
+                                        alt="Component UI example"
+                                        width={1000}
+                                        height={700}
+                                        className="rounded-2xl"
+                                        onClick={() => setSelectedImage({
+                                            src: "/projects/frontcover/3.2  Component example.png",
+                                            alt: "Component UI example"
+                                        })}
+                                    />
+                                    <div className="absolute bottom-4 right-4 bg-white hover:bg-gray-100 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-all shadow-lg"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedImage({
+                                                src: "/projects/frontcover/3.2  Component example.png",
+                                                alt: "Component UI example"
+                                            });
+                                        }}
+                                    >
+                                        <MagnifyingGlassIcon className="w-6 h-6 text-gray-600 hover:text-gray-900" />
+                                    </div>
+                                </div>
                                 <p className="text-gray-700 font-sm mb-8 px-4">Examples of: Designed widgets with standardized sizes and consistent styling across different content types.</p>
                             </div>
                         </div>
@@ -174,13 +294,30 @@ export default function Frontcover () {
                             <p className='text-gray-800 text-3xl font-semibold mb-4'>Iteration and refinement</p>
                             <p className='text-gray-700 text-xl leading-relaxed mb-6'>Collaborated with the founder through multiple design iterations to optimize layouts and visual elements.</p>
                             <div className="flex flex-col gap-6">
-                                <Image 
-                                    src="/projects/frontcover/4.1 Iteration.png"
-                                    alt="Iteration"
-                                    width={1000}    
-                                    height={700}
-                                    className="rounded-2xl"
-                                />
+                                <div className="relative group cursor-pointer">
+                                    <Image 
+                                        src="/projects/frontcover/4.1 Iteration.png"
+                                        alt="Iteration"
+                                        width={1000}
+                                        height={700}
+                                        className="rounded-2xl"
+                                        onClick={() => setSelectedImage({
+                                            src: "/projects/frontcover/4.1 Iteration.png",
+                                            alt: "Iteration"
+                                        })}
+                                    />
+                                    <div className="absolute bottom-4 right-4 bg-white hover:bg-gray-100 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-all shadow-lg"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedImage({
+                                                src: "/projects/frontcover/4.1 Iteration.png",
+                                                alt: "Iteration"
+                                            });
+                                        }}
+                                    >
+                                        <MagnifyingGlassIcon className="w-6 h-6 text-gray-600 hover:text-gray-900" />
+                                    </div>
+                                </div>
                                 <p className="text-gray-700 font-sm mb-8 px-4">Screenshots: Refined widget designs through feedback cycles, exploring various layout options and icon styles.</p>
                             </div>
                         </div>
@@ -191,13 +328,30 @@ export default function Frontcover () {
                             <p className='text-gray-800 text-3xl font-semibold mb-4'>Designed a reusable template for other communities on the platform</p>
                             <p className='text-gray-700 text-xl leading-relaxed mb-6'>Created a reusable Figma template enabling communities to customize widgets while maintaining design consistency easily.</p>
                             <div className="flex flex-col gap-6">
-                                <Image 
-                                    src="/projects/frontcover/Frontcover-Portfolio-cover.png"
-                                    alt="Template"
-                                    width={1000}
-                                    height={700}
-                                    className="rounded-2xl"
-                                />
+                                <div className="relative group cursor-pointer">
+                                    <Image 
+                                        src="/projects/frontcover/Frontcover-Portfolio-cover.png"
+                                        alt="Template"
+                                        width={1000}
+                                        height={700}
+                                        className="rounded-2xl"
+                                        onClick={() => setSelectedImage({
+                                            src: "/projects/frontcover/Frontcover-Portfolio-cover.png",
+                                            alt: "Template"
+                                        })}
+                                    />
+                                    <div className="absolute bottom-4 right-4 bg-white hover:bg-gray-100 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-all shadow-lg"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedImage({
+                                                src: "/projects/frontcover/Frontcover-Portfolio-cover.png",
+                                                alt: "Template"
+                                            });
+                                        }}
+                                    >
+                                        <MagnifyingGlassIcon className="w-6 h-6 text-gray-600 hover:text-gray-900" />
+                                    </div>
+                                </div>
                                 <p className="text-gray-700 font-sm mb-2 px-4">Created an organized template with clear documentation and preset layouts for efficient design changes. Community managers can easily make content changes based on the template. (Image: Design Template Cover)</p>
                             </div>
                         </div>

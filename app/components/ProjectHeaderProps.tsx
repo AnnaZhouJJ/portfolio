@@ -50,7 +50,7 @@ const ProjectHeader = ({
 
                 {/* Right Column - Title and Description */}
                 <div className="space-y-8 lg:border-l lg:pl-10 border-gray-200">
-                    <h1 className="text-5xl font-semibold text-gray-800 leading-snug">
+                    <h1 className="text-[44px] font-semibold text-gray-800 leading-snug">
                         {title}
                     </h1>
                     <p className="text-xl text-gray-700 leading-relaxed">

@@ -36,7 +36,7 @@ const ProjectsSection = () => {
         dateRange="September 2024 - October 2024"
         tags={["UI/UX Design", "Mobile", "Website"]}
         imageOnRight={true}
-        link="/projects/lexill"
+        link="/projects/Lexill"
       >
         <Image 
           src="/projects/lexill/lexill-cover.png"
