@@ -83,13 +83,13 @@ export default function Frontcover () {
                             <div className="flex flex-col gap-12">
                                 {[
                                     {
-                                        src: '/projects/frontcover/frontcover - before.png',
-                                        alt: 'Frontcover design - before changes',
+                                        src: '/projects/frontcover/Frontcover - before.png',
+                                        alt: 'Frontcover community page - before changes',
                                         caption: 'Before changes (Frontcover Community Page)'
                                     },
                                     {
-                                        src: '/projects/frontcover/frontcover - after2.png',
-                                        alt: 'Frontcover design - after changes',
+                                        src: '/projects/frontcover/Frontcover - after2.png',
+                                        alt: 'Frontcover community page - after changes',
                                         caption: 'After changes example (Frontcover Community Page)'
                                     }
                                 ].map((image, index) => (
