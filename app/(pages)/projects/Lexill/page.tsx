@@ -48,7 +48,7 @@ export default function Lexill() {
                                     <ul className="text-lg space-y-6 text-gray-600 list-disc">
                                         <li>Leveraged the successful mobile app design to create a responsive web presence for Lexill (desktop and mobile).</li>
                                         <li>Adapted the existing design system for web use, ensuring brand consistency across platforms.</li>
-                                        <li>Designed an informative and engaging landing page to showcase the app's unique features and benefits.</li>
+                                        <li>{"Designed an informative and engaging landing page to showcase the app's unique features and benefits."}</li>
                                         <li>Incorporated user acquisition elements such as app store and a waitlist sign-up form.</li>
                                     </ul>
                                 </div>
@@ -138,7 +138,7 @@ export default function Lexill() {
                             {/* Onboarding */}
                             <div className="grid grid-cols-1 lg:grid-cols-[250px,600px] gap-10 mb-4 mx-4">
                                 <p className="text-gray-700 font-semibold mb-4">Onboarding</p>
-                                <p className="text-gray-700 text-base mb-4">Begin their language journey with an immersive experience that introduces Lexill's magical learning approach and assesses their starting level.</p>
+                                <p className="text-gray-700 text-base mb-4">{"Begin their language journey with an immersive experience that introduces Lexill's magical learning approach and assesses their starting level."}</p>
                             </div>
                             <div className="relative group cursor-pointer">
                                 <Image 
@@ -229,7 +229,7 @@ export default function Lexill() {
                             <div className="grid grid-cols-1 lg:grid-cols-[500px,500px] gap-10 mb-4">
                                 <div>
                                     <p className="text-gray-700 font-semibold mb-4 mx-6">Character Collection</p>
-                                    <p className="text-gray-700 text-base mb-6 mx-6">Showcase the mastered Hanzi and spells in a collection system, tracking users' progress and achievements in the language journey.</p>
+                                    <p className="text-gray-700 text-base mb-6 mx-6">{"Showcase the mastered Hanzi and spells in a collection system, tracking users' progress and achievements in the language journey."}</p>
                                     <div className="relative group cursor-pointer">
                                         <Image 
                                             src="/projects/lexill/Feature 3.png"
