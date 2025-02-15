@@ -29,7 +29,7 @@ export function NavBar() {
 
     // Nav bar with hover and focus state
     return (
-        <div className={`h-[80px] w-screen fixed bg-white/50 backdrop-blur-sm shadow-[0_4px_40px_0_rgba(212,212,212,0.25)] px-12
+        <div className={`h-[70px] w-screen fixed bg-white/50 backdrop-blur-sm shadow-[0_4px_40px_0_rgba(212,212,212,0.25)] px-12
                         flex items-center justify-between transition-transform duration-300 z-50
                         ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
             
