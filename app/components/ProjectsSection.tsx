@@ -54,7 +54,7 @@ const ProjectsSection = () => {
         dateRange="September 2023 - December 2023"
         tags={["UI/UX Design", "Kiosk Interface"]}
         imageOnRight={false}
-        link="/projects/happyCapStudio"
+        link="/projects/HappyCapStudio"
       >
         <Image 
           src="/projects/happycap/happycap-cover.png"
