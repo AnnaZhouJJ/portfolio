@@ -67,13 +67,13 @@ const OtherWorks = () => {
       },
       {
         title: "Interactive 3D Keyboard | Spline",
-        imageSrc: "/projects/other/3D-keyboard.png",
+        imageSrc: "/projects/other/3D-Keyboard.png",
         imageAlt: "Interactive 3D keyboard design",
         link:"https://my.spline.design/keyboardtutcopy-d326a68394044361506920e76600ce06/"
       },
       {
         title: "COVIDENT | Mobile Healthcare APP",
-        imageSrc: "/projects/other/covident.png",
+        imageSrc: "/projects/other/Covident.png",
         imageAlt: "COVIDENT mobile app design",
         link:"https://www.behance.net/gallery/180075701/Healthcare-APP-COVIDIENT"
       },
