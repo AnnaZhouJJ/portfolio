@@ -286,7 +286,7 @@ export default function HappyCapStudio() {
                                     <ul className="text-gray-600 text-lg list-disc ml-5 leading-loose">
                                         <li>Added a clear instruction:&quot;Please select quantity of prints&quot; directly below the title. Provides immediate context and clear direction to users.</li>
                                         <li>Included a clear &quot;Total Amount: $25&quot; display. Provides immediate feedback on the cost, enhancing transparency and user confidence in the transaction.</li>
-                                        <li>"Time limited" is labelled in the top-right corner for clarity.</li>
+                                        <li>&quot;Time limited&quot; is labelled in the top-right corner for clarity.</li>
                                     </ul>
                                     <p className="text-gray-700 text-lg font-semibold mt-4">3. Layout and Visual Clarity:</p>
                                     <ul className="text-gray-600 text-lg list-disc ml-5 leading-loose">
