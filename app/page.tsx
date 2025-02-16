@@ -37,8 +37,11 @@ export default function Home() {
         {/* Other Works Section */}
         <OtherWorks />
       </div>
-
-      <Footer />
+      
+      <div className="max-w-[1440px] mx-auto px-12">
+        <Footer />
+      </div>
+      
 
     </div>
 

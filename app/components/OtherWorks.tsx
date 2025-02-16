@@ -26,7 +26,7 @@ const WorkCard = ({ title, imageSrc, imageAlt, link }: WorkCardProps) => {
               className="w-full"
             />
           </div>
-          <h3 className="text-xl font-semibold text-gray-700 mt-8">{title}</h3>
+          <h3 className="text-xl font-semibold text-gray-700 mt-6 lg:mt-8">{title}</h3>
         </div>
       </Link>
       
@@ -88,7 +88,7 @@ const OtherWorks = () => {
 
 
     return (
-        <div className="max-w-[1440px] mx-12 px-12 mt-2">
+        <div className="max-w-[1440px] mx-2 lg:mx-10 px-2 lg:px-12 mt-2">
           {/* Section Title */}
           <div className="flex items-center gap-4 mb-8">
             <div className="w-12 h-[1px] bg-gray-600"></div>
@@ -96,7 +96,7 @@ const OtherWorks = () => {
           </div>
     
           {/* Two-column grid with bigger images */}
-          <div className="grid grid-cols-1 md:grid-cols-2 sm-grid-cols-1 gap-x-20 gap-y-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 sm-grid-cols-1 gap-x-20 gap-y-8 lg:gap-y-0">
             {works.map((work, index) => (
               <div key={index} className={index % 2 === 1 ? "md:mt-14" : ""}>
                 <WorkCard

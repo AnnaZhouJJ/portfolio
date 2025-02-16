@@ -39,7 +39,12 @@ const Footer = () => {
                 <p className="mb-2 mx-4">
                     {"I'm here to assist you with both long-term and short-term UI/UX design projects."}
                 </p>
-                <p>{"Let's get in touch✌️"}</p>
+                <Link 
+                    href="/contact" 
+                    className="inline-block text-gray-800 hover:text-gray-500 transition-colors"
+                >
+                    {"Let's get in touch ✌️"}
+                </Link>
             </div>
 
             <div className="flex justify-center gap-4 mb-6">
