@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Skills from '@/app/components/Skills';
 import Footer from '@/app/components/Footer';
+import Toolstack from '@/app/components/Toolstack';
 
 export default function About() {
 
@@ -44,8 +45,14 @@ export default function About() {
         </div>
       </div>
 
+      {/* Toolstack */}
+      <Toolstack />
+
+      {/* Skills */}
+      <Skills />
+
       {/* Education */}
-      <div className='flex flex-col justify-center my-32 mx-28 px-8 md:px-16'>
+      <div className='flex flex-col justify-center my-28 lg:mx-28 px-2 md:px-16'>
         <h1 className='text-gray-800 font-semibold text-4xl mb-8'>Education</h1>
         
         <div className="space-y-20">
@@ -56,14 +63,14 @@ export default function About() {
                 alt="University of Melbourne Logo"
                 width={150}
                 height={150}
-                className="rounded-xl"
+                className="rounded-xl mb-4"
                 // priority
                 quality={100}
               />
             </div>
             
-            <div className='flex flex-col gap-y-4'>
-              <h3 className="text-2xl text-gray-700 "><b>Human-Computer Interaction</b>, Master of IT</h3>
+            <div className='flex flex-col gap-y-2'>
+              <h3 className="text-2xl text-gray-700 leading-relaxed"><b>Human-Computer Interaction</b>, Master of IT</h3>
               <div className="flex items-center gap-2 text-xl">
                 <span className="text-gray-600">University of Melbourne</span>
                 <span className="text-gray-600">•</span>
@@ -81,13 +88,13 @@ export default function About() {
                 alt="University of Melbourne Logo"
                 width={150}
                 height={150}
-                className="rounded-md"
+                className="rounded-md mb-4"
                 // priority
                 quality={100}
               />
             </div>
-            <div className='flex flex-col gap-y-4'>
-              <h3 className="text-2xl text-gray-700 "><b>Digital Technologies</b>, Bachelor of Design</h3>
+            <div className='flex flex-col gap-y-2'>
+              <h3 className="text-2xl text-gray-700 leading-relaxed"><b>Digital Technologies</b>, Bachelor of Design</h3>
               <div className="flex items-center gap-2 text-xl">
                 <span className="text-gray-600">University of Melbourne</span>
                 <span className="text-gray-600">•</span>
@@ -97,14 +104,8 @@ export default function About() {
                 Built a strong foundation in programming (HTML, CSS, JavaScript, Python) and UI/UX tools, blending technical skills with creative problem-solving.</p>
             </div>
           </div>
-
-
         </div>
-
       </div>
-
-      {/* Skills */}
-      <Skills />
 
       {/* Footer */}
       <Footer />

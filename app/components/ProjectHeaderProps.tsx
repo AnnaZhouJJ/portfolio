@@ -20,16 +20,21 @@ const ProjectHeader = ({
             <div className="grid grid-cols-1 lg:grid-cols-[200px,800px] gap-10">
                 {/* Left Column - Project Details */}
                 <div className="space-y-8 mt-2">
-                    {/* Client */}
-                    <div>
-                        <h2 className="text-gray-800 font-medium uppercase mb-2">CLIENT</h2>
-                        <p className="text-gray-700">{client}</p>
-                    </div>
+                    {/* Client and Year - Row on small screens */}
+                    <div className="flex flex-row lg:flex-col gap-20 lg:gap-8">
+                        {/* Client */}
+                        <div>
+                            <h2 className="text-gray-800 font-medium uppercase mb-2">CLIENT</h2>
+                            <p className="text-gray-700">{client}</p>
+                        </div>
 
-                    {/* Year */}
-                    <div>
-                        <h2 className="text-gray-800 font-medium uppercase mb-2">YEAR</h2>
-                        <p className="text-gray-700">{year}</p>
+                        {/* Year */}
+                        <div>
+                            <h2 className="text-gray-800 font-medium uppercase mb-2">YEAR</h2>
+                            <p className="text-gray-700">{year}</p>
+                        </div>
+
+                        
                     </div>
 
                     {/* Scope of Work */}

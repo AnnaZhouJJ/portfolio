@@ -25,7 +25,7 @@ const Footer = () => {
 
     return (
         <footer className="w-full py-8 mt-20">
-            <div className="max-w-[1440px] mx-auto px-12 flex flex-col items-center justify-center">
+            <div className="max-w-[1440px] mx-auto px-2 md:px-12 flex flex-col items-center justify-center">
                 {/* Line above email */}
                 <div className="w-full max-w-6xl border-t border-gray-300 mb-8"></div>
 
@@ -39,7 +39,12 @@ const Footer = () => {
                 <p className="mb-2 mx-4">
                     {"I'm here to assist you with both long-term and short-term UI/UX design projects."}
                 </p>
-                <p>{"Let's get in touch✌️"}</p>
+                <Link 
+                    href="/contact" 
+                    className="inline-block text-gray-800 hover:text-gray-500 transition-colors"
+                >
+                    {"Let's get in touch ✌️"}
+                </Link>
             </div>
 
             <div className="flex justify-center gap-4 mb-6">

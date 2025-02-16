@@ -299,7 +299,7 @@ export default function HappyCapStudio() {
                         {/* More Designs */}
                         <div className="max-w-[1000px] w-full mt-20">
                             <p className="text-lg font-semibold text-gray-700 px-4 mb-6">More Designs</p>
-                            <div className="flex flex-col gap-6">
+                            <div className="flex flex-col gap-14">
                                 <div className="relative group cursor-pointer">
                                     <Image 
                                         src="/projects/happycap/UI 1.png"
@@ -326,7 +326,7 @@ export default function HappyCapStudio() {
                                     </div>
                                 </div>
                                 
-                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full max-w-[1000px]">
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-auto w-full max-w-[1000px]">
                                     <div className="relative group cursor-pointer flex items-center justify-center">
                                         <Image 
                                             src="/projects/happycap/UI 2.png"
@@ -353,7 +353,7 @@ export default function HappyCapStudio() {
                                             <MagnifyingGlassIcon className="w-6 h-6 text-gray-600 hover:text-gray-900" />
                                         </div>
                                     </div>
-                                    <div className="relative group cursor-pointer flex items-center justify-center">
+                                    <div className="relative group cursor-pointer flex items-center justify-end">
                                         <Image 
                                             src="/projects/happycap/UI 3.png"
                                             alt="Photo Preview UI"
