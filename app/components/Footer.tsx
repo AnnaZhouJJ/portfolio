@@ -25,7 +25,7 @@ const Footer = () => {
 
     return (
         <footer className="w-full py-8 mt-20">
-            <div className="max-w-[1440px] mx-auto px-12 flex flex-col items-center justify-center">
+            <div className="max-w-[1440px] mx-auto px-2 md:px-12 flex flex-col items-center justify-center">
                 {/* Line above email */}
                 <div className="w-full max-w-6xl border-t border-gray-300 mb-8"></div>
 
