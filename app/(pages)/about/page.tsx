@@ -2,6 +2,13 @@ import Image from 'next/image';
 import Skills from '@/app/components/Skills';
 import Footer from '@/app/components/Footer';
 import Toolstack from '@/app/components/Toolstack';
+import type { Metadata } from "next";
+
+//Tab title
+export const metadata: Metadata = {
+  title: "Portfolio",
+  description: "Learn more about Anna Zhou",
+};
 
 export default function About() {
 
