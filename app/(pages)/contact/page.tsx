@@ -1,5 +1,6 @@
 import ContactForm from '@/app/components/ContactForm';
 import Footer from "@/app/components/Footer";
+import type { Metadata } from "next";
 
 // Server action
 async function sendEmail(formData: FormData) {
@@ -47,6 +48,11 @@ async function sendEmail(formData: FormData) {
     return { success: false };
   }
 }
+//Tab title
+export const metadata: Metadata = {
+  title: "Portfolio",
+  description: "Get in touch with Anna Zhou",
+};
 
 export default function Contact() {
   return (
