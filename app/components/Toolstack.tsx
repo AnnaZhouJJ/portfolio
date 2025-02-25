@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface ToolCard {
     title: string;
@@ -7,6 +10,8 @@ interface ToolCard {
 }
 
 const Toolstack = () => {
+    const gridRef = useScrollAnimation<HTMLDivElement>();
+
     const tools: ToolCard[] = [
         {
             title: "Figma",
@@ -52,9 +57,14 @@ const Toolstack = () => {
 
     return (
         <div className='flex flex-col justify-center my-28 lg:mx-28 px-2 md:px-16'>
-            <h1 className='text-gray-800 font-semibold text-4xl mb-12'>Toolstack</h1>
+            <h1 className='text-gray-800 font-semibold text-4xl mb-12'>
+                Toolstack
+            </h1>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div 
+                ref={gridRef}
+                className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 opacity-0"
+            >
                 {tools.map((tool, index) => (
                     <div 
                         key={index} 

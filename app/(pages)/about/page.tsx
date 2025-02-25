@@ -15,7 +15,7 @@ export default function About() {
   return (
     <div className="max-w-[1440px] mx-auto px-12 pt-32">
       {/* Description of about me */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-16 mt-16">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-16 mt-16 animate-fade-in-up">
         <div className="lg:w-[400px] rounded-3xl transition-all duration-300 hover:scale-105 hover:rotate-2 hover:shadow-2xl">
           <Image
             src="/projects/other/Profile-photo.jpg"

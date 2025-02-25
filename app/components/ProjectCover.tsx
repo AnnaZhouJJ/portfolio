@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface ProjectCoverProps {
     title: string;
@@ -19,9 +22,13 @@ const ProjectCover = ({
     imageOnRight = false,
     link
 }: ProjectCoverProps) => {
+    const animationRef = useScrollAnimation<HTMLDivElement>();
+
     const content = (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 mb-20 lg:mb-32 max-w-6xl">
-            {/* Always render image first on mobile, use order classes for desktop */}
+        <div 
+            ref={animationRef}
+            className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 mb-20 lg:mb-32 max-w-6xl opacity-0"
+        >
             <div className={`w-full flex items-center ${!imageOnRight ? 'md:order-1' : 'md:order-2'}`}>
                 {children}
             </div>
@@ -49,11 +56,10 @@ const ProjectCover = ({
     );
 
     if (link) {
-        const isExternal = link.startsWith('http');
         return (
             <Link 
                 href={link}
-                {...(isExternal ? {
+                {...(link.startsWith('http') ? {
                     target: "_blank",
                     rel: "noopener noreferrer"
                 } : {})}
@@ -66,4 +72,5 @@ const ProjectCover = ({
 
     return content;
 };
+
 export default ProjectCover;

@@ -1,5 +1,8 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 interface WorkCardProps {
     title: string;
@@ -9,14 +12,17 @@ interface WorkCardProps {
 }
 
 const WorkCard = ({ title, imageSrc, imageAlt, link }: WorkCardProps) => {
+    const animationRef = useScrollAnimation<HTMLAnchorElement>();
+
     return (
       <Link 
         href={link} 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="mb-1 block group cursor-pointer"
+        className="mb-1 block group cursor-pointer opacity-0"
+        ref={animationRef}
       >
-        <div className="mb-1 ">
+        <div className="mb-1">
           <div className="rounded-xl overflow-hidden shadow-lg hover:brightness-90 transition-all duration-300">
             <Image
               src={imageSrc}
@@ -29,11 +35,12 @@ const WorkCard = ({ title, imageSrc, imageAlt, link }: WorkCardProps) => {
           <h3 className="text-xl font-semibold text-gray-700 mt-6 lg:mt-8">{title}</h3>
         </div>
       </Link>
-      
     );
 };
 
 const OtherWorks = () => {
+    const titleRef = useScrollAnimation<HTMLDivElement>();
+    
     const works = [
       {
         title: "Flow | Digital Bank Landing Page",
@@ -86,11 +93,13 @@ const OtherWorks = () => {
       // Add more works here
     ];
 
-
     return (
         <div className="max-w-[1440px] mx-2 lg:mx-10 px-2 lg:px-12 mt-2">
           {/* Section Title */}
-          <div className="flex items-center gap-4 mb-8">
+          <div 
+            className="flex items-center gap-4 mb-8 opacity-0" 
+            ref={titleRef}
+          >
             <div className="w-12 h-[1px] bg-gray-600"></div>
             <h3 className="text-xl font-medium text-gray-600">OTHER WORKS</h3>
           </div>
