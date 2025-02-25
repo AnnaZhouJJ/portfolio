@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface SkillCard {
     title: string;
@@ -7,6 +10,11 @@ interface SkillCard {
 }
 
 const Skills = () => {
+    // Create refs for each row
+    const firstRowRef = useScrollAnimation<HTMLDivElement>();
+    const secondRowRef = useScrollAnimation<HTMLDivElement>();
+    const thirdRowRef = useScrollAnimation<HTMLDivElement>();
+
     const skills: SkillCard[] = [
         {
             title: "UI & Vision Design",
@@ -40,26 +48,81 @@ const Skills = () => {
         }
     ];
 
+    // Split skills into rows (2 skills per row)
+    const firstRow = skills.slice(0, 2);
+    const secondRow = skills.slice(2, 4);
+    const thirdRow = skills.slice(4, 6);
+
     return (
         <div className='flex flex-col justify-center my-28 lg:mx-28 px-2 md:px-16'>
             <h1 className='text-gray-800 font-semibold text-4xl mb-12'>Skills</h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20">
-                {skills.map((skill, index) => (
-                    <div key={index} className="flex flex-col max-w-xl">
-                        <div className="mb-6">
-                        <Image
-                            src={skill.iconSrc}
-                            alt={`${skill.title} icon`}
-                            width={90}
-                            height={90}
-                            className="p-2 rounded-lg"
-                        />
+            <div className="flex flex-col gap-y-20">
+                {/* First Row */}
+                <div 
+                    ref={firstRowRef}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-x-16 opacity-0"
+                >
+                    {firstRow.map((skill, index) => (
+                        <div key={index} className="flex flex-col max-w-xl">
+                            <div className="mb-6">
+                                <Image
+                                    src={skill.iconSrc}
+                                    alt={`${skill.title} icon`}
+                                    width={90}
+                                    height={90}
+                                    className="p-2 rounded-lg"
+                                />
+                            </div>
+                            <h3 className="text-2xl font-semibold text-gray-600 mb-4">{skill.title}</h3>
+                            <p className="text-lg text-gray-500 leading-relaxed max-w-lg">{skill.description}</p>
                         </div>
-                        <h3 className="text-2xl font-semibold text-gray-600 mb-4">{skill.title}</h3>
-                        <p className="text-lg text-gray-500 leading-relaxed max-w-lg">{skill.description}</p>
-                    </div>
-                ))}
+                    ))}
+                </div>
+
+                {/* Second Row */}
+                <div 
+                    ref={secondRowRef}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-x-16 opacity-0"
+                >
+                    {secondRow.map((skill, index) => (
+                        <div key={index} className="flex flex-col max-w-xl">
+                            <div className="mb-6">
+                                <Image
+                                    src={skill.iconSrc}
+                                    alt={`${skill.title} icon`}
+                                    width={90}
+                                    height={90}
+                                    className="p-2 rounded-lg"
+                                />
+                            </div>
+                            <h3 className="text-2xl font-semibold text-gray-600 mb-4">{skill.title}</h3>
+                            <p className="text-lg text-gray-500 leading-relaxed max-w-lg">{skill.description}</p>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Third Row */}
+                <div 
+                    ref={thirdRowRef}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-x-16 opacity-0"
+                >
+                    {thirdRow.map((skill, index) => (
+                        <div key={index} className="flex flex-col max-w-xl">
+                            <div className="mb-6">
+                                <Image
+                                    src={skill.iconSrc}
+                                    alt={`${skill.title} icon`}
+                                    width={90}
+                                    height={90}
+                                    className="p-2 rounded-lg"
+                                />
+                            </div>
+                            <h3 className="text-2xl font-semibold text-gray-600 mb-4">{skill.title}</h3>
+                            <p className="text-lg text-gray-500 leading-relaxed max-w-lg">{skill.description}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
