@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description: "Personal portfolio of Anna Zhou",
   icons: {
     icon: [
-      { url: "/favicon.ico" },  // Try this first
+      { url: "/favicon.ico" }, 
       { url: "/profile-icon.png", sizes: "32x32", type: "image/png" },
     ],
     shortcut: "/profile-icon.png",
