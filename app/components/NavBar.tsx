@@ -33,7 +33,7 @@ export function NavBar() {
                         flex items-center justify-between transition-transform duration-300 z-50
                         ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
             
-            <div className="font-bold text-lg">
+            <div className="font-bold text-lg text-gray-800">
                 <Link href={"/"}>AnnaZ.</Link>
             </div>
             
