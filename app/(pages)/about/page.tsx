@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 export default function About() {
 
   return (
-    <div className="max-w-[1440px] mx-auto px-12 pt-32">
+    <div className="max-w-[1440px] mx-auto px-4 md:px-12 pt-32">
       {/* Description of about me */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-16 mt-16 animate-fade-in-up">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-16 mt-4 lg:mt-16 animate-fade-in-up">
         <div className="lg:w-[400px] rounded-3xl transition-all duration-300 hover:scale-105 hover:rotate-2 hover:shadow-2xl">
           <Image
             src="/projects/other/Profile-photo.jpg"
@@ -78,10 +78,9 @@ export default function About() {
             
             <div className='flex flex-col gap-y-2'>
               <h3 className="text-2xl text-gray-700 leading-relaxed"><b>Human-Computer Interaction</b>, Master of IT</h3>
-              <div className="flex items-center gap-2 text-xl">
+              <div className="flex flex-wrap items-center gap-2 text-xl">
                 <span className="text-gray-600">University of Melbourne</span>
-                <span className="text-gray-600">•</span>
-                <span className='text-gray-600'>2022 - 2023</span>
+                <span className='text-gray-600'>• 2022 - 2023</span>
               </div>
               <p className='text-gray-500 text-lg'>Specialized in designing and developing user-centered digital systems, with a focus on <b>usability evaluation, interaction design, and prototyping. </b> 
                 Gained hands-on experience in mobile app development, wearables, and software development processes, preparing me to create innovative solutions that bridge human needs and technology.</p>
@@ -102,10 +101,9 @@ export default function About() {
             </div>
             <div className='flex flex-col gap-y-2'>
               <h3 className="text-2xl text-gray-700 leading-relaxed"><b>Digital Technologies</b>, Bachelor of Design</h3>
-              <div className="flex items-center gap-2 text-xl">
+              <div className="flex flex-wrap items-center gap-2 text-xl">
                 <span className="text-gray-600">University of Melbourne</span>
-                <span className="text-gray-600">•</span>
-                <span className='text-gray-600'>2019 - 2021</span>
+                <span className='text-gray-600'>• 2019 - 2021</span>
               </div>
               <p className='text-gray-500 text-lg'>Focused on designing and developing digital solutions, including <b>UI/UX design, web development and user experience. </b>
                 Built a strong foundation in programming (HTML, CSS, JavaScript, Python) and UI/UX tools, blending technical skills with creative problem-solving.</p>

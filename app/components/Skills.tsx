@@ -57,7 +57,7 @@ const Skills = () => {
         <div className='flex flex-col justify-center my-28 lg:mx-28 px-2 md:px-16'>
             <h1 className='text-gray-800 font-semibold text-4xl mb-12'>Skills</h1>
 
-            <div className="flex flex-col gap-y-20">
+            <div className="flex flex-col gap-y-8 lg:gap-y-20">
                 {/* First Row */}
                 <div 
                     ref={firstRowRef}

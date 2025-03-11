@@ -3,7 +3,7 @@ import ProjectCover from "./ProjectCover";
 
 const ProjectsSection = () => {
   return (
-    <div className="max-w-[1440px] mx-2 lg:mx-10 px-2 lg:px-12 mt-48 ">
+    <div className="max-w-[1440px] mx-2 lg:mx-10 lg:px-12 mt-28 lg:mt-48 ">
       {/* max-w-[1440px] mx-12 px-2 md:px-12 mt-48 */}
       {/* Feature Projects Title */}
       

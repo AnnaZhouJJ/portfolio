@@ -30,7 +30,7 @@ const Footer = () => {
                 <div className="w-full max-w-6xl border-t border-gray-300 mb-8"></div>
 
                 <a href="mailto:annauiuxdesign@gmail.com"
-                className="text-3xl font-semibold text-gray-800 hover:text-gray-600 transition-colors mb-6">
+                className="text-2xl lg:text-3xl font-semibold text-gray-800 hover:text-gray-600 transition-colors mb-6">
                 annauiuxdesign@gmail.com
                 </a>
             </div>

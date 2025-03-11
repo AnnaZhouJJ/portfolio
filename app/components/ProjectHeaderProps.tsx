@@ -16,7 +16,7 @@ const ProjectHeader = ({
     websiteLink 
 }: ProjectHeaderProps) => {
     return (
-        <div className="max-w-[1440px] mx-auto px-12 pt-32 flex justify-center">
+        <div className="max-w-[1440px] mx-auto px-8 md:px-12 pt-32 flex justify-center">
             <div className="grid grid-cols-1 lg:grid-cols-[200px,800px] gap-10">
                 {/* Left Column - Project Details */}
                 <div className="space-y-8 mt-2">
