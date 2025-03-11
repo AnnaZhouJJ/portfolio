@@ -20,7 +20,7 @@ export default function Lexill() {
                 description="As the solo UI/UX designer for Lexill, I designed an innovative mobile application and website that revolutionizes Chinese learning for English speakers. My mission was to create an intuitive and visually appealing interface that supports the app's innovative learning approach and transforms the challenging language acquisition journey into an exciting adventure."
             />
             {/* Rest of the case study content */}
-            <div className="max-w-[1440px] mx-auto px-12 pt-20 flex flex-col items-center">
+            <div className="max-w-[1440px] mx-auto px-8 md:px-12 pt-20 flex flex-col items-center">
                 <div className="flex flex-col justify-center">
                     <Image 
                         src="/projects/lexill/Lexill - portfolio.png"

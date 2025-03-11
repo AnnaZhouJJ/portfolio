@@ -20,7 +20,7 @@ export default function HappyCapStudio() {
                 description="Happy Cap Studio is a boutique self-service photo studio where friends and family can take photos together. Working as a solo UI/UX Designer, I work closely with the founder/client to manage the project. I redesigned the kiosk interface to enhance user experience and visual design."                
             />
             
-            <div className="max-w-[1440px] mx-auto px-2 pt-20 flex flex-col items-center">
+            <div className="max-w-[1440px] mx-auto px-8 md:px-12 pt-20 flex flex-col items-center">
                 <div className="flex flex-col justify-center w-full">
                     <div className="relative group cursor-pointer">
                         <Image 

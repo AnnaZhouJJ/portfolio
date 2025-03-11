@@ -18,9 +18,9 @@ export default function Home() {
       />
       
       {/* Content */}
-      <div className="max-w-[1440px] mx-auto px-12 flex flex-col items-center justify-center">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-12 flex flex-col items-center justify-center">
         <div className="mt-40 animate-fade-in-up">
-          <h1 className="text-5xl text-gray-800 sm:text-7xl font-bold mb-4 md:mb-8 lg:mb-12 mt-24 leading-relaxed">
+          <h1 className="text-5xl text-gray-800 sm:text-7xl font-bold mb-4 md:mb-8 lg:mb-12 mt-8 lg:mt-24 leading-relaxed">
             {"Hi, I'm Anna Zhou 👋"}
           </h1>
           <h2 className="text-3xl sm:text-5xl font-medium text-gray-800 mb-4 md:mb-8 lg:mb-12">
