@@ -37,17 +37,17 @@ const ProjectCover = ({
                 <h3 className="text-gray-800 text-4xl font-semibold mb-5">{title}</h3>
                 <p className="text-gray-600 text-xl mb-5">{description}</p>
                 <p className="text-gray-500 mb-8">{dateRange}</p>
-                <div>
+                <div className="flex flex-wrap">
                     {tags.map((tag, index) => (
                         <span
                             key={index}
-                            className="mr-4 px-4 py-3 bg-gray-100 rounded-md text-sm text-gray-500"
+                            className="mr-4 mb-4 lg:mb-0 px-4 py-3 bg-gray-100 rounded-md text-sm text-gray-500"
                         >
                             {tag}
                         </span>
                     ))}
                 </div>
-                <button className="font-medium mt-8 w-40 text-center text-lg
+                <button className="font-medium mt-2 lg:mt-8 w-40 text-center text-lg
                     text-gray-800 hover:bg-gray-800 hover:text-white py-2 rounded-lg transition-all duration-200 hover:scale-100">
                     {link?.startsWith('http') ? 'View on Behance' : 'View Case Study'}
                 </button>

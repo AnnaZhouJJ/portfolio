@@ -21,7 +21,7 @@ export default function Frontcover () {
                 websiteLink="https://frontcover.com"
             />
             {/* Rest of the case study content */}
-            <div className="max-w-[1440px] mx-auto px-12 pt-20 flex flex-col items-center">
+            <div className="max-w-[1440px] mx-auto px-8 md:px-12 pt-20 flex flex-col items-center">
                 <div className="flex flex-col justify-center">
                     <Image 
                         src="/projects/frontcover/Frontcover-Portfolio-cover.png"

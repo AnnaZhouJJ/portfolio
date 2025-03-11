@@ -56,8 +56,8 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <div className="max-w-[1440px] mx-auto px-12 pt-24">
-      <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl p-12 mt-16">
+    <div className="max-w-[1440px] mx-auto px-4 md:px-12 pt-16 md:pt-24">
+      <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl p-8 md:p-12 mt-16">
         <ContactForm onSubmit={sendEmail} />
       </div>
       <Footer />
