@@ -149,8 +149,7 @@ export default function SinclairWilson () {
                     <p className='text-gray-700 text-xl font-semibold leading-relaxed mb-2'>Navigation & Accessibility Issues:</p>
                     <ul className="text-lg space-y-2 text-gray-600 list-disc pl-10">
                         <li>Left-side vertical navigation is unconventional for financial websites, creating potential user confusion</li>
-                        <li>Search functionality lacks clear visual affordance (no visible button or clear indication it's a search field)</li>
-                        <li>Critical functions like "Client Login" were not prominently positioned for regular users</li>
+                        <li>{"Critical functions like 'Client Login' were not prominently positioned for regular users"}</li>
                     </ul>
                     <p className='text-gray-700 text-xl font-semibold leading-relaxed mt-6 mb-2'>Content Strategy Weaknesses:</p>
                     <ul className="text-lg space-y-2 text-gray-600 list-disc pl-10">
@@ -162,7 +161,7 @@ export default function SinclairWilson () {
                     <p className='text-gray-700 text-xl font-semibold leading-relaxed mt-6 mb-2'>Design & Visual Hierarchy:</p>
                     <ul className="text-lg space-y-2 text-gray-600 list-disc pl-10">
                         <li>Cluttered layout with inconsistent visual hierarchy made content scanning difficult</li>
-                        <li>Outdated visual design didn't reflect the firm's professional standing</li>
+                        <li>{"Outdated visual design didn't reflect the firm's professional standing"}</li>
                         <li>Overall aesthetic failed to inspire confidence in an industry where trust is paramount</li>
                     </ul>
                     <p className='text-gray-700 text-xl font-semibold leading-relaxed mt-6 mb-2'>Responsive Design Limitations:</p>
@@ -244,7 +243,7 @@ export default function SinclairWilson () {
                     <p className='text-gray-700 text-xl font-semibold leading-relaxed mb-2'>1. Strategic Content Architecture</p>
                     <ul className="text-lg space-y-2 text-gray-600 list-disc pl-10">
                         <li>Reorganized landing page content with a clear visual hierarchy</li>
-                        <li>Added new sections to better showcase the company's expertise and services</li>
+                        <li>{"Added new sections to better showcase the company's expertise and services"}</li>
                         <li>Designed content blocks to guide users through a logical information flow</li>
                         <li>Created dedicated spaces for team introduction and service highlights</li>
                     </ul>
@@ -252,7 +251,7 @@ export default function SinclairWilson () {
                     <ul className="text-lg space-y-2 text-gray-600 list-disc pl-10">
                         <li>Strategically placed clear, compelling calls-to-action throughout the page</li>
                         <li>Made contact points easily accessible at multiple user journey touchpoints</li>
-                        <li>Created visual emphasis for the "Client Login" and "Get in Touch" actions</li>
+                        <li>{"Created visual emphasis for the 'Client Login' and 'Get in Touch' actions"}</li>
                         <li>Designed service cards with subtle interaction cues to encourage exploration</li>
                     </ul>
                     <p className='text-gray-700 text-xl font-semibold leading-relaxed mt-6 mb-2'>3. Wireframe</p>
