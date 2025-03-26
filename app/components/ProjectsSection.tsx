@@ -12,6 +12,24 @@ const ProjectsSection = () => {
         <h3 className="text-xl font-medium text-gray-600">FEATURE PROJECTS</h3>
       </div>
 
+      {/* Sinclair Wilson Project */}
+      <ProjectCover 
+        title="Sinclair Wilson"
+        description="A professional accounting and financial services firm."
+        dateRange="March 2025"
+        tags={["Website", "Landing Page", "UI/UX Design", "Responsive"]}
+        imageOnRight={true}
+        link="/projects/SinclairWilson"
+      >
+        <Image 
+          src="/projects/SinclairWilson/1.SinclairWilson Cover.png"
+          alt="SinclairWilson Website Mockup"
+          width={545}
+          height={327}
+          className="w-full rounded-xl shadow-lg hover:brightness-90 transition-all duration-300"
+        />
+      </ProjectCover>
+
       {/* Frontcover Project */}
       <ProjectCover 
         title="Frontcover"

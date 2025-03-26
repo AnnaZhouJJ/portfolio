@@ -43,6 +43,12 @@ const OtherWorks = () => {
     
     const works = [
       {
+        title: "Sales Analytics Dashboard",
+        imageSrc: "/projects/other/Sales-Dashbaord.png",
+        imageAlt: "Sales Analytics Dashboard",
+        link: "https://dribbble.com/shots/25770479-Sales-Analytics-Dashboard-Dark-mode"
+      },
+      {
         title: "Flow | Digital Bank Landing Page",
         imageSrc: "/projects/other/flow-landing.png",
         imageAlt: "Flow digital bank landing page design",
@@ -84,13 +90,6 @@ const OtherWorks = () => {
         imageAlt: "COVIDENT mobile app design",
         link:"https://www.behance.net/gallery/180075701/Healthcare-APP-COVIDIENT"
       },
-      {
-        title: "MealTime | Social APP",
-        imageSrc: "/projects/other/MealTime.png",
-        imageAlt: "MealTime social app design",
-        link:"https://www.behance.net/gallery/179337755/Social-cooking-APP-MealTime"
-      },
-      // Add more works here
     ];
 
     return (
