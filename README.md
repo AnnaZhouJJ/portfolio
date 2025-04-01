@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Anna Zhou - UI/UX Designer
 
-## Getting Started
+🙌 Hi there! I'm a freelance UI/UX designer specializing in designing human-centred digital experiences. 
 
-First, run the development server:
+With a Master's in IT focused on Human-Computer Interaction, I blend technical expertise with design finesse to create intuitive websites, mobile apps, and dashboards.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+My end-to-end approach includes user research, ideation, and prototype development. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📧 I'm here to assist you with both long-term and short-term UI/UX design projects.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+👇 Follow me on:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🌟[Dribbble](https://dribbble.com/Zhou_JJ)
 
-## Learn More
+🌸[Instagram](https://www.instagram.com/annaz.uiux/) 
 
-To learn more about Next.js, take a look at the following resources:
+🐋[Behance](https://www.behance.net/annazhouuiuxdesign) 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
