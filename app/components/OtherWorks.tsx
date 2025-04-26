@@ -43,6 +43,12 @@ const OtherWorks = () => {
     
     const works = [
       {
+        title:"Lulla - E-commerce web design",
+        imageSrc: "/projects/other/Lulla.png",
+        imageAlt: "Lulla - E-commerce web design",
+        link:"https://lullaproductdemo.framer.website/"
+      },
+      {
         title: "Sales Analytics Dashboard",
         imageSrc: "/projects/other/Sales-Dashbaord.png",
         imageAlt: "Sales Analytics Dashboard",
@@ -72,12 +78,12 @@ const OtherWorks = () => {
         imageAlt: "Spotify AR UI design",
         link:"https://dribbble.com/shots/24673328-Spatial-UI-for-Spotify-Apple-Vision-Pro-visionOS"
       },
-      {
-        title: "tEMR System | Healthcare App",
-        imageSrc: "/projects/other/tEMR-system.png",
-        imageAlt: "tEMR system design",
-        link:"https://www.behance.net/gallery/180185525/Healthcare-APP-tEMR"
-      },
+      // {
+      //   title: "tEMR System | Healthcare App",
+      //   imageSrc: "/projects/other/tEMR-system.png",
+      //   imageAlt: "tEMR system design",
+      //   link:"https://www.behance.net/gallery/180185525/Healthcare-APP-tEMR"
+      // },
       {
         title: "Interactive 3D Keyboard | Spline",
         imageSrc: "/projects/other/3D-Keyboard.png",
