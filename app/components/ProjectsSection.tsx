@@ -40,7 +40,7 @@ const ProjectsSection = () => {
         link="/projects/frontcover"
       >
         <Image 
-          src="/projects/frontcover/Frontcover cover.png"
+          src="/projects/frontcover/Frontcover - cover 2.png"
           alt="Frontcover logo"
           width={545}
           height={327}
@@ -76,7 +76,7 @@ const ProjectsSection = () => {
         link="/projects/HappyCapStudio"
       >
         <Image 
-          src="/projects/happycap/happycap-cover.png"
+          src="/projects/happycap/happycap-cover2.jpg"
           alt="Happy Cap Studio logo"
           width={545}
           height={327}
